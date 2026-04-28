@@ -1,14 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 main {
     width:100vw;
-    height:100vh;
+    min-height:100vh;
     background:#141414;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .box {
-    width:325px;
+    width:100%;
+    max-width: 325px;
     background:#1F1F1F;
     border-radius:12px;
     padding:40px;
@@ -23,7 +35,6 @@ img {
 }
 
 .name {
-    font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 600;
     color:#FFFFFF;
@@ -32,7 +43,6 @@ img {
 }
 
 .location {
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color:#C5F82A;
@@ -41,7 +51,6 @@ img {
 }
 
 .message {
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 400;
     color:#E0E0E0;
@@ -54,7 +63,6 @@ ul {
 }
 
 .social-link {
-    font-family: 'Inter', sans-serif;
     display: block;
     background-color: #333333;
     color: #FFFFFF;
@@ -67,7 +75,28 @@ ul {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.social-link:focus {
+  outline: 3px solid #C5F82A;
+  outline-offset: 4px;
+}
+
 .social-link:hover {
     background-color: #C5F82A;
     color: #141414;
+}
+
+@media (max-width: 375px) {
+    .box {
+        width: 90%;
+        padding: 24px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .social-link {
+        padding: 12px; 
+        font-size: 14px;
+    }
 }
